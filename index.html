@@ -42,6 +42,84 @@
     <ul>
         <li><a href="https://yohayt.github.io/Ethiopia_exp/distnames.html">District names</li>
     </ul>
+
+
+<h2>Submit Your Rankings</h2>
+<form id="rankingForm">
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="metric1">Metric 1 Ranking:</label>
+  <select id="metric1" name="metric1" required>
+    <option value="">Select a map</option>
+    <option value="Maps1_Left">Maps 1 - Left</option>
+    <option value="Maps1_Middle">Maps 1 - Middle</option>
+    <option value="Maps1_Right">Maps 1 - Right</option>
+    <option value="Maps2_Left">Maps 2 - Left</option>
+    <option value="Maps2_Middle">Maps 2 - Middle</option>
+    <option value="Maps2_Right">Maps 2 - Right</option>
+    <option value="Maps3_Left">Maps 3 - Left</option>
+    <option value="Maps3_Middle">Maps 3 - Middle</option>
+    <option value="Maps3_Right">Maps 3 - Right</option>
+    <option value="Maps4_Left">Maps 4 - Left</option>
+    <option value="Maps4_Middle">Maps 4 - Middle</option>
+    <option value="Maps4_Right">Maps 4 - Right</option>
+  </select><br><br>
+
+  <label for="metric2">Metric 2 Ranking:</label>
+  <select id="metric2" name="metric2" required>
+    <option value="">Select a map</option>
+    <option value="Maps1_Left">Maps 1 - Left</option>
+    <option value="Maps1_Middle">Maps 1 - Middle</option>
+    <option value="Maps1_Right">Maps 1 - Right</option>
+    <option value="Maps2_Left">Maps 2 - Left</option>
+    <option value="Maps2_Middle">Maps 2 - Middle</option>
+    <option value="Maps2_Right">Maps 2 - Right</option>
+    <option value="Maps3_Left">Maps 3 - Left</option>
+    <option value="Maps3_Middle">Maps 3 - Middle</option>
+    <option value="Maps3_Right">Maps 3 - Right</option>
+    <option value="Maps4_Left">Maps 4 - Left</option>
+    <option value="Maps4_Middle">Maps 4 - Middle</option>
+    <option value="Maps4_Right">Maps 4 - Right</option>
+  </select><br><br>
+
+  <label for="metric3">Metric 3 Ranking:</label>
+  <select id="metric3" name="metric3" required>
+    <option value="">Select a map</option>
+    <option value="Maps1_Left">Maps 1 - Left</option>
+    <option value="Maps1_Middle">Maps 1 - Middle</option>
+    <option value="Maps1_Right">Maps 1 - Right</option>
+    <option value="Maps2_Left">Maps 2 - Left</option>
+    <option value="Maps2_Middle">Maps 2 - Middle</option>
+    <option value="Maps2_Right">Maps 2 - Right</option>
+    <option value="Maps3_Left">Maps 3 - Left</option>
+    <option value="Maps3_Middle">Maps 3 - Middle</option>
+    <option value="Maps3_Right">Maps 3 - Right</option>
+    <option value="Maps4_Left">Maps 4 - Left</option>
+    <option value="Maps4_Middle">Maps 4 - Middle</option>
+    <option value="Maps4_Right">Maps 4 - Right</option>
+  </select><br><br>
+
+  <button type="submit">Submit Rankings</button>
+</form>
+
+<script>
+  document.getElementById('rankingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const data = {
+      name: document.getElementById('name').value,
+      metric1: document.getElementById('metric1').value,
+      metric2: document.getElementById('metric2').value,
+      metric3: document.getElementById('metric3').value
+    };
+
+    console.log('Rankings submitted:', data);
+    alert('Thanks, ' + data.name + '! Your rankings have been recorded.');
+    // You can send `data` to a backend using fetch() here
+  });
+</script>
+
         
 </body>
 </html>
